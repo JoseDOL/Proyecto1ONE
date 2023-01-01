@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="js/scriptEntrada.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encriptador - ONE </title>
+  <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+
+    <img src="Imagenes/Sin título-1.svg" alt="Encabezado">
+
+  </div>
+</head>
+
+<body class="p-3 mb-2 bg-dark text-white">
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col bg-dark text-white">
+      <div class="card h-100 bg-dark text-white">
+        <div class="mb-3 bg-dark text-white">
+          <label for="divEntrada" class="form-label bg-dark text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-journal-text" viewBox="0 0 16 16">
+              <path
+                d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+              <path
+                d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+              <path
+                d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+            </svg>
+            Texto de Entrada</label>
+          <textarea class="form-control bg-dark text-white border border-success" id="divEntrada" rows="20"></textarea>
+        </div>
+        <div class="card-footer">
+          <div class="alert alert-danger " role="alert" id="alerta1" style="display: none">
+
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            <div class="col bg-dark text-white">
+              <button type="button" class="btn btn-primary " id="btnEn" onclick="encriptarEntrada()">Encriptar</button>
+            </div>
+            <div class="col bg-dark text-white">
+              <button type="button" class="btn btn-secondary " id="btnDes" onclick="desncriptarEntrada()">Desencriptar</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col bg-dark text-white">
+      <div class="card h-100 bg-dark text-white">
+        <div class="mb-3 bg-dark text-white">
+          <label for="divSalida" class="form-label bg-dark text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-text-wrap"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm0 4a.5.5 0 0 1 .5-.5h9a2.5 2.5 0 0 1 0 5h-1.293l.647.646a.5.5 0 0 1-.708.708l-1.5-1.5a.5.5 0 0 1 0-.708l1.5-1.5a.5.5 0 0 1 .708.708l-.647.646H11.5a1.5 1.5 0 0 0 0-3h-9a.5.5 0 0 1-.5-.5Zm0 4a.5.5 0 0 1 .5-.5H7a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5Z" />
+            </svg>
+            Texto de Salida </label>
+          <textarea class="form-control bg-dark text-white border border-success" id="divSalida" rows="20"
+            disabled></textarea>
+        </div>
+        <div class="card-footer">
+          <div class="alert alert-info" role="alert" id="alertC" style="display: none;">
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <div class="col-auto bg-dark text-white ">
+              <button type="button" class="btn btn-primary " id="btnCopi" onclick="copiarTexto ()">Copiar</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<form>-->
+  <!--<p>Enter an email address:</p>-->
+  <!--<input id='email' placeholder="Email">-->
+  <!--<button type='button' id='validate2' onclick="validate1()"> Validate!</button>-->
+  <!--</form>-->
+  <!--<h2 id='result1'></h2>-->
+  <footer class="mt-5 row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+    <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+
+      <h7> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code"
+          viewBox="0 0 16 16">
+          <path
+            d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+        </svg>Created by Jose Ordoñez Lima <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+          <path
+            d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+        </svg>
+      </h7>
+
+    </div>
+  </footer>
+</body>
+
+</html>
